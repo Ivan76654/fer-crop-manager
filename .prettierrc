@@ -1,0 +1,17 @@
+{
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "semi": true,
+    "trailingComma": "none",
+    "bracketSameLine": true,
+    "arrowParens": "always",
+    "overrides": [
+        {
+            "files": "*.html",
+            "options": {
+                "singleQuote": false
+            }
+        }
+    ]
+}
