@@ -1,0 +1,58 @@
+div.form-container {
+  display: grid;
+  place-content: center;
+  font-size: 1.3rem;
+}
+
+form.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px gray;
+  min-width: 35vw;
+}
+
+form.login-form h3.login-title {
+  text-align: center;
+}
+
+form.login-form label {
+  padding: 10px 0px;
+}
+
+form.login-form input {
+  padding: 4px;
+  font-size: inherit;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid black;
+}
+
+form.login-form input.ng-touched.ng-invalid {
+  border-color: red;
+}
+
+form.login-form button.submit-btn {
+  padding: 3px;
+  margin-top: 15px;
+  font-size: inherit;
+  background-color: blue;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px gray;
+}
+
+form.login-form button.submit-btn:active {
+  box-shadow: none;
+}
+
+form.login-form p.invalid-msg {
+  padding-top: 3px;
+  color: red;
+  font-size: 1rem;
+}
