@@ -16,3 +16,11 @@ body {
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
 }
+
+main.main-content {
+  flex: 1;
+  overflow-y: scroll;
+  max-height: 80vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
