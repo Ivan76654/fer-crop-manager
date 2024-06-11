@@ -19,7 +19,7 @@ body {
 
 main.main-content {
   flex: 1;
-  overflow-y: scroll;
+  overflow: auto;
   max-height: 80vh;
   padding-top: 10px;
   padding-bottom: 10px;
