@@ -60,3 +60,10 @@ form.login-form p.invalid-msg {
   color: red;
   font-size: 1rem;
 }
+
+form.login-form p.error-msg {
+  text-align: center;
+  margin-top: 5px;
+  color: red;
+  font-size: 1.15rem;
+}

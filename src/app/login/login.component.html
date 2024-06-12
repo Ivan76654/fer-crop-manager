@@ -1,16 +1,23 @@
 <div class="form-container">
-  <form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()" class="login-form">
-    <h3 class="login-title">FER Crop Manager</h3>
-    <label for="username">Username:</label>
-    <input class="form-input" id="username" name="username" type="text" formControlName="username">
-    @if (loginFormGroup.get('username')?.touched && loginFormGroup.get('username')?.invalid) {
-    <p class="invalid-msg">*Username is required!*</p>
-    }
-    <label for="password">Password:</label>
-    <input class="form-input" id="password" name="password" type="password" formControlName="password">
-    @if (loginFormGroup.get('password')?.touched && loginFormGroup.get('password')?.invalid) {
-    <p class="invalid-msg">*Password must contain at least 6 characters!*</p>
-    }
-    <button class="submit-btn" type="submit">Login</button>
-  </form>
+  @if (!isLoading) {
+    <form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()" class="login-form">
+      <h3 class="login-title">FER Crop Manager</h3>
+      <label for="username">Username:</label>
+      <input class="form-input" id="username" name="username" type="text" formControlName="username">
+      @if (loginFormGroup.get('username')?.touched && loginFormGroup.get('username')?.invalid) {
+        <p class="invalid-msg">Username is required!</p>
+      }
+      <label for="password">Password:</label>
+      <input class="form-input" id="password" name="password" type="password" formControlName="password">
+      @if (loginFormGroup.get('password')?.touched && loginFormGroup.get('password')?.invalid) {
+        <p class="invalid-msg">Password must contain at least 6 characters!</p>
+      }
+      <button class="submit-btn" type="submit" [disabled]="!loginFormGroup.valid">Login</button>
+      @if (error) {
+        <p class="error-msg">{{ error }}</p>
+      }
+    </form>
+  } @else {
+    <app-loading-spinner />
+  }
 </div>
