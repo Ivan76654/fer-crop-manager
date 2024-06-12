@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { DevicesComponent } from './devices/devices.component';
 import { InfoComponent } from './info/info.component';
 import { authGuard } from './auth/auth.guard';
+import { loginGuard } from './login/login.guard';
 
 export const routes: Routes = [
   {
@@ -19,7 +20,8 @@ export const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [loginGuard]
   },
   {
     path: 'devices',
