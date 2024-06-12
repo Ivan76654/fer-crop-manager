@@ -51,3 +51,7 @@ button.logout-btn {
 button.logout-btn:active {
   box-shadow: 0px 0px 0px;
 }
+
+button.logout-btn:hover {
+  background-color: #f33;
+}

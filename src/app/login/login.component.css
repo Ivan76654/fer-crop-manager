@@ -51,6 +51,10 @@ form.login-form button.submit-btn:active {
   box-shadow: none;
 }
 
+form.login-form button.submit-btn:hover {
+  background-color: #33f;
+}
+
 form.login-form p.invalid-msg {
   padding-top: 3px;
   color: red;
