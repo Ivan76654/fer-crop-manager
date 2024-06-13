@@ -1,6 +1,4 @@
 export class User {
-  public userId?: string;
-
   constructor(
     public username: string,
     private _token: string,

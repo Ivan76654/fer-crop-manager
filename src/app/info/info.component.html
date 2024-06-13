@@ -1,1 +1,78 @@
-<p>info works!</p>
+<div class="info-container">
+  @if (!isLoading) {
+    <div class="entry-container">
+      <p class="larger-font">
+        <span class="entry-title">Name:</span> 
+        @if (userInfo.name) {
+          {{ userInfo.name }}
+        } @else {
+          <span class="not-provided"> No data</span>
+        }
+      </p>
+    </div>
+    <div class="entry-container">
+      <p class="larger-font">
+        <span class="entry-title">First name:</span> 
+        @if (userInfo.firstName) {
+          {{ userInfo.firstName }}
+        } @else {
+          <span class="not-provided"> No data</span>
+        }
+      </p>
+    </div>
+    <div class="entry-container">
+      <p class="larger-font">
+        <span class="entry-title">Last name:</span> 
+        @if (userInfo.lastName) {
+          {{ userInfo.lastName }}
+        } @else {
+          <span class="not-provided"> No data</span>
+        }
+      </p>
+    </div>
+    <div class="entry-container">
+      <p class="larger-font">
+        <span class="entry-title">E-mail:</span> 
+        @if (userInfo.email) {
+          {{ userInfo.email }}
+        } @else {
+          <span class="not-provided"> No data</span>
+        }
+      </p>
+    </div>
+    <div class="entry-container">
+      <p class="larger-font">
+        <span class="entry-title">Phone number:</span> 
+        @if (userInfo.phone) {
+          {{ userInfo.phone }}
+        } @else {
+          <span class="not-provided"> No data</span>
+        }
+      </p>
+    </div>
+    <div class="entry-container">
+      <p class="larger-font">
+        <span class="entry-title">Created on:</span> 
+        @if (userInfo.createdTime) {
+          {{ userInfo.createdTime | date: 'medium' }}
+        } @else {
+          <span class="not-provided"> No data</span>
+        }
+      </p>
+    </div>
+    <div class="entry-container">
+      <p class="larger-font">
+        <span class="entry-title">Description:</span> 
+        @if (userInfo.additionalInfo && userInfo.additionalInfo.description) {
+          <span class="description-text">{{ userInfo.additionalInfo.description }}</span>
+        } @else {
+          <span class="not-provided"> No data</span>
+        }
+      </p>
+    </div>
+  } @else {
+    <div class="center-loader">
+      <app-loading-spinner />
+    </div>
+  }
+</div>

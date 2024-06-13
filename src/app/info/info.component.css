@@ -1,0 +1,27 @@
+div.entry-container {
+  margin-top: 10px;
+}
+
+div.entry-container p.larger-font {
+  font-size: larger;
+}
+
+div.entry-container span.entry-title {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+div.entry-container span.not-provided {
+  color: gray;
+}
+
+div.entry-container span.description-text {
+  display: block;
+  padding-top: 5px;
+  text-align: justify;
+}
+
+div.center-loader {
+  display: grid;
+  place-content: center;
+}
