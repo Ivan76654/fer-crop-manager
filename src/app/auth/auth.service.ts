@@ -55,7 +55,6 @@ export class AuthService {
 
     const loadedUser = new User(
       userData.username,
-      userData.userId,
       userData._token,
       new Date(userData._tokenExpirationDate)
     );
@@ -94,7 +93,7 @@ export class AuthService {
 
   private handleAuthentication(username: string, token: string): void {
     const expirationDate = new Date(new Date().getTime() + this.tokenExpiresInMilis);
-    const user = new User(username, '', token, expirationDate);
+    const user = new User(username, token, expirationDate);
 
     this.user.next(user);
     this.autoLogout(this.tokenExpiresInMilis);
