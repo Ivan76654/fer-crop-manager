@@ -1,0 +1,25 @@
+div.table-container {
+  display: grid;
+  place-content: center;
+}
+
+table {
+	min-width: 80vw;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+thead {
+	background-color: lightblue;
+}
+
+tbody tr:nth-child(even) {
+	background-color: rgb(236, 234, 234);
+}
+
+th,
+td {
+	text-align: left;
+	padding: 5px;
+	border: 1px solid black;
+}

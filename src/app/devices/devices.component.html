@@ -1,1 +1,28 @@
-<p>devices works!</p>
+<div class="table-container">
+  @if(!isLoading) {
+    <table>
+      <thead>
+        <tr>
+          <th>Created On</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Label</th>
+          <th>Is Gateway</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (device of devices; track device.deviceId) {
+          <tr>
+            <td>{{ device.createdOn | date: 'medium' }}</td>
+            <td>{{ device.name }}</td>
+            <td>{{ device.type }}</td>
+            <td>{{ device.label }}</td>
+            <td>{{ device.isGateway ? 'Yes' : 'No' }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  } @else {
+    <app-loading-spinner />
+  }
+</div>

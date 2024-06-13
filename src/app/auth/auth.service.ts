@@ -75,6 +75,7 @@ export class AuthService {
           this.router.navigate(['/login']);
           this.user.next(null);
           localStorage.removeItem('userData');
+          localStorage.removeItem('customerId');
 
           if (this.tokenExpirationTimer) {
             clearTimeout(this.tokenExpirationTimer);
