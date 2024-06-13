@@ -21,6 +21,5 @@ main.main-content {
   flex: 1;
   overflow: auto;
   max-height: 86vh;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
 }
