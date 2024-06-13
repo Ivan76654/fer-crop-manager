@@ -1,8 +1,8 @@
 export const environment = {
-  production: false,
+  production: true,
   thingsboardConfig: {
-    hostUrl: 'http://localhost:8080',
-    wsHostUrl: 'ws://127.0.0.1:8080/api/ws',
+    hostUrl: 'http://161.53.19.19:45080',
+    wsHostUrl: 'ws://161.53.19.19:45080/api/ws/plugins/telemetry',
     tokenExpiresIn: 2.5 // hours
   }
 };
