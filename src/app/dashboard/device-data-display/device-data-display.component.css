@@ -1,0 +1,20 @@
+div.device-data-display {
+  font-size: 1.25rem;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px gray;
+}
+
+span.bold {
+  font-weight: bold;
+}
+
+p.device-name {
+  margin-bottom: 4px;
+}
+
+p.device-data {
+  font-size: 1.15rem;
+}

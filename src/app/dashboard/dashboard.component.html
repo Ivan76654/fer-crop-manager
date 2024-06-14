@@ -1,1 +1,13 @@
-<main>dashboard works!</main>
+<div class="main-container">
+  @if (!isloading) {
+  <div class="display-container">
+    @for (device of devices; track device.deviceId) {
+    <app-device-data-display [device]="device" />
+    }
+  </div>
+  } @else {
+  <div class="center-container">
+    <app-loading-spinner />
+  </div>
+  }
+</div>

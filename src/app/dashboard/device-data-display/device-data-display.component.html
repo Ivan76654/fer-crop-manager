@@ -1,0 +1,8 @@
+<div class="device-data-display">
+  <p class="device-name"><span class="bold">Device:</span> {{ device.name }}</p>
+  @for (reading of readingKeys; track reading) {
+  <p class="device-data">
+    <span class="bold">{{ reading }}:</span> {{ currentReading[reading] }}
+  </p>
+  }
+</div>
