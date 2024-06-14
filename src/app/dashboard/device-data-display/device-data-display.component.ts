@@ -35,6 +35,8 @@ export class DeviceDataDisplayComponent implements OnInit, OnDestroy {
     this.readingSubscription = this.telemetryService.telemetryData.subscribe((data) => {
       if (data.subscriptionId != this.subId) return;
 
+      console.log(data);
+
       if (this.initialReading) {
         this.readingKeys = Object.keys(data.data);
         for (let key of this.readingKeys) {
@@ -43,12 +45,14 @@ export class DeviceDataDisplayComponent implements OnInit, OnDestroy {
 
         this.initialReading = false;
       } else {
-        const reading = Object.keys(data.data);
+        const readings = Object.keys(data.data);
 
-        if (!reading.length) return;
+        if (!readings.length) return;
 
-        const readingValue = +data.data[reading[0]][0][1];
-        this.currentReading[reading[0]] = Math.round(readingValue * 10) / 10;
+        for (let readingKey of readings) {
+          const readingValue = +data.data[readingKey][0][1];
+          this.currentReading[readingKey] = Math.round(readingValue * 10) / 10;
+        }
       }
     });
   }
