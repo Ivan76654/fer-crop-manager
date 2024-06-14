@@ -1,6 +1,7 @@
 # FerCropManager
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+<br>
 Minimum required Node version is v18.19.
 
 ## Install dependencies
