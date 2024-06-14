@@ -35,8 +35,6 @@ export class DeviceDataDisplayComponent implements OnInit, OnDestroy {
     this.readingSubscription = this.telemetryService.telemetryData.subscribe((data) => {
       if (data.subscriptionId != this.subId) return;
 
-      console.log(data);
-
       if (this.initialReading) {
         this.readingKeys = Object.keys(data.data);
         for (let key of this.readingKeys) {
